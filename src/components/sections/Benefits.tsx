@@ -36,7 +36,7 @@ export default function Benefits() {
     <section id="benefits" className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
 
-        <h2 className="mb-4 text-center text-4xl font-bold">
+        <h2 className="mb-4 text-center text-4xl font-bold text-gray-900">
           Why Choose Accredian?
         </h2>
 

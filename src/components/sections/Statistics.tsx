@@ -22,7 +22,7 @@ export default function Statistics() {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
 
-        <h2 className="mb-12 text-center text-3xl font-bold">
+        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
           Trusted by Leading Organizations
         </h2>
 
