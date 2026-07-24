@@ -3,19 +3,65 @@ import SectionContainer from "@/components/ui/SectionContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const features = [
-  ["01", "Built around your strategy", "Align programs to your workforce plans, market shifts, and the goals that matter now."],
-  ["02", "Experts who understand the work", "Bring practitioners into the learning journey, from real projects to relevant feedback."],
-  ["03", "One clear view of progress", "Give leaders a simple view of engagement, capability growth, and meaningful outcomes."],
-  ["04", "Flexible by design", "Blend live learning, workshops, and on-demand content around how your teams actually work."],
+  {
+    number: "01",
+    title: "Customized Learning Programs",
+    description:
+      "Design learning journeys that align with your organization's goals, workforce, and business objectives.",
+  },
+  {
+    number: "02",
+    title: "Industry Expert Mentors",
+    description:
+      "Learn from experienced professionals who provide practical guidance and real-world insights.",
+  },
+  {
+    number: "03",
+    title: "Progress Tracking",
+    description:
+      "Track employee engagement, learning progress, and business outcomes through a centralized dashboard.",
+  },
+  {
+    number: "04",
+    title: "Flexible Learning Experience",
+    description:
+      "Support instructor-led, self-paced, and hybrid learning programs for teams of every size.",
+  },
 ];
 
 export default function Benefits() {
   return (
-    <section id="platform" className="bg-white py-20 sm:py-28">
+    <section id="features" className="bg-white py-20 sm:py-24">
       <SectionContainer>
-        <SectionHeading eyebrow="The enterprise learning studio" title="Everything your teams need to keep moving forward." description="A practical learning system that feels personal to employees and clear to the people leading them." />
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
-          {features.map(([number, title, description]) => <Card key={number} className="group p-7 transition duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-950/5"><div className="flex items-start gap-5"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-sm font-semibold text-slate-700 transition group-hover:bg-blue-600 group-hover:text-white">{number}</span><div><h3 className="text-xl font-semibold tracking-tight text-slate-950">{title}</h3><p className="mt-3 leading-7 text-slate-600">{description}</p><span className="mt-5 inline-block text-sm font-semibold text-blue-700">See how it works →</span></div></div></Card>)}
+        <SectionHeading
+          eyebrow="Enterprise Features"
+          title="Everything Your Organization Needs to Build Future-Ready Teams"
+          description="Deliver high-quality learning experiences that help employees develop practical skills and drive measurable business growth."
+        />
+
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          {features.map((feature) => (
+            <Card
+              key={feature.number}
+              className="p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+            >
+              <div className="flex items-start gap-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-base font-bold text-white">
+                  {feature.number}
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    {feature.title}
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-slate-600">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </SectionContainer>
     </section>

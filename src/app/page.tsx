@@ -5,10 +5,23 @@ import Companies from "@/components/sections/Companies";
 import Statistics from "@/components/sections/Statistics";
 import Benefits from "@/components/sections/Benefits";
 import Testimonials from "@/components/sections/Testimonials";
-import Partners from "@/components/sections/Partners";
-import CTA from "@/components/sections/CTA";
+import Programs from "@/components/sections/Programs";
 import ContactForm from "@/components/sections/ContactForm";
+import FAQ from "@/components/sections/FAQ";
 
 export default function Home() {
-  return <><Navbar /><main><Hero /><Companies /><Statistics /><Benefits /><Testimonials /><Partners /><CTA /><ContactForm /></main><Footer /></>;
+  return <>
+    <Navbar />
+    <main>
+      <Hero />
+      <Companies />
+      <Statistics />
+      <Benefits />
+      <Testimonials />
+      <Programs />
+      <FAQ />
+      <ContactForm />
+    </main>
+    <Footer />
+  </>;
 }
