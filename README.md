@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Accredian Enterprise Landing Page
+
+A responsive enterprise learning platform landing page built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This project recreates the Accredian Enterprise website while following modern frontend development practices such as reusable components, responsive design, and API-based data fetching.
+
+## Live Demo
+
+**Website:** https://accredian-enterprise-blond.vercel.app
+
+## GitHub Repository
+
+**Repository:** https://github.com/sujithpabba/accredian-enterprise
+
+---
+
+## Project Overview
+
+The goal of this project was to recreate the Accredian Enterprise landing page with a clean, responsive design while maintaining a scalable project structure. The application also demonstrates frontend interaction with a mock API using Next.js Route Handlers and the Fetch API.
+
+---
+
+## Features
+
+- Responsive design for desktop, tablet, and mobile devices
+- Modern enterprise landing page UI
+- Reusable UI components
+- Interactive FAQ accordion
+- Contact form with client-side validation
+- Programs section powered by the Fetch API
+- Mock backend using Next.js Route Handlers
+- Service layer for API communication
+- TypeScript interfaces for improved type safety
+- Optimized images using the Next.js `Image` component
+- Smooth scrolling navigation
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js 16 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+### API
+
+- Next.js Route Handlers
+- Fetch API
+
+### Tools
+
+- Git
+- GitHub
+- Vercel
+- Font Awesome
+
+---
+
+## Project Structure
+
+```text
+src
+│
+├── app
+│   ├── api
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components
+│   ├── layout
+│   ├── sections
+│   └── ui
+│
+├── data
+├── services
+└── types
+
+public
+├── images
+└── logos
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Clone the Repository
+
+```bash
+git clone https://github.com/sujithpabba/accredian-enterprise.git
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API
 
-## Deploy on Vercel
+This project includes a mock API built using **Next.js Route Handlers**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Endpoint**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+/api/programs
+```
+
+The Programs section retrieves data using the Fetch API through a dedicated service layer, following a structure similar to a real-world frontend application communicating with a backend service.
+
+---
+
+## AI Usage
+
+AI tools were used for guidance and debugging during development. The project was implemented, reviewed, and tested throughout the development process.
+
+---
+
+
+## Future Improvements
+
+- Integrate with a backend service
+- Store data in a database
+- Add authentication and authorization
+- Implement search and filtering for programs
+- Add automated testing
+
+---
+
+## Author
+
+**Sujith P**
+
+GitHub: https://github.com/sujithpabba
