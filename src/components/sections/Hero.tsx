@@ -24,11 +24,14 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button text="Contact Us" />
+              <Button
+                text="Contact Us"
+                href="#contact"
+              />
 
               <Button
                 text="Explore Programs"
-                variant="outline"
+                href="#programs" variant="outline"
               />
             </div>
           </div>

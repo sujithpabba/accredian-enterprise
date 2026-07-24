@@ -29,15 +29,10 @@ export default function Statistics() {
               Measurable Impact
             </p>
 
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
               Learning that moves the business.
             </h2>
           </div>
-
-          <p className="max-w-sm text-sm leading-6 text-slate-600">
-            Empower organizations with industry-focused learning programs that
-            deliver measurable results and long-term business growth.
-          </p>
         </div>
 
         <div className="grid overflow-hidden rounded-2xl border border-blue-100 bg-white sm:grid-cols-2 lg:grid-cols-4">

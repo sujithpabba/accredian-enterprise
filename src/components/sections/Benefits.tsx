@@ -35,7 +35,7 @@ export default function Benefits() {
       <SectionContainer>
         <SectionHeading
           eyebrow="Enterprise Features"
-          title="Everything Your Organization Needs to Build Future-Ready Teams"
+          title="Build Future-Ready Teams"
           description="Deliver high-quality learning experiences that help employees develop practical skills and drive measurable business growth."
         />
 

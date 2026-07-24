@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCloud,
@@ -11,47 +13,36 @@ import {
 import Card from "@/components/ui/Card";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { useEffect, useState } from "react";
+import { getPrograms } from "@/services/programService";
+import { Program } from "@/types/program";
 
-const programs = [
-  {
-    title: "Cloud & Data",
-    description:
-      "Build expertise in cloud computing, data engineering, analytics, and modern data platforms.",
-    icon: faCloud,
-  },
-  {
-    title: "Product Management",
-    description:
-      "Learn product strategy, roadmap planning, stakeholder management, and product delivery.",
-    icon: faChartLine,
-  },
-  {
-    title: "Leadership",
-    description:
-      "Develop leadership, communication, decision-making, and people management skills.",
-    icon: faUsers,
-  },
-  {
-    title: "Cybersecurity",
-    description:
-      "Strengthen security awareness, risk management, and cybersecurity best practices.",
-    icon: faShieldHalved,
-  },
-  {
-    title: "Design & Innovation",
-    description:
-      "Encourage creative thinking, design thinking, and innovation-driven problem solving.",
-    icon: faLightbulb,
-  },
-  {
-    title: "Operations",
-    description:
-      "Improve operational efficiency, business processes, and project execution capabilities.",
-    icon: faGears,
-  },
-];
+const iconMap = {
+  cloud: faCloud,
+  chart: faChartLine,
+  users: faUsers,
+  shield: faShieldHalved,
+  lightbulb: faLightbulb,
+  gears: faGears,
+};
+
 
 export default function Programs() {
+  const [programs, setPrograms] = useState<Program[]>([]);
+
+  useEffect(() => {
+    async function loadPrograms() {
+      try {
+        const data = await getPrograms();
+        setPrograms(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadPrograms();
+  }, []);
+
   return (
     <section id="programs" className="bg-white py-20 sm:py-24">
       <SectionContainer>
@@ -65,13 +56,13 @@ export default function Programs() {
           {programs.map((program) => (
             <Card
               key={program.title}
-              className="p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
+              className="p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-700">
-                <FontAwesomeIcon icon={program.icon} />
+              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-blue-100 text-3xl text-blue-700">
+                <FontAwesomeIcon icon={iconMap[program.icon as keyof typeof iconMap]} />
               </div>
 
-              <h3 className="text-xl font-semibold text-slate-900">
+              <h3 className="mt-2 text-xl font-semibold text-slate-900">
                 {program.title}
               </h3>
 

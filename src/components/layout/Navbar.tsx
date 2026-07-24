@@ -41,9 +41,10 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Button
-            text="Contact Us"
-            className="px-5 py-2 text-sm"
-          />
+              text="Contact Us"
+              href="#contact"
+              className="px-5 py-2 text-sm"
+            />
         </div>
 
         {/* Mobile Menu */}
@@ -81,7 +82,8 @@ export default function Navbar() {
 
             <Button
               text="Contact Us"
-              className="mt-2 w-full px-3 py-2 text-sm"
+              href="#contact"
+              className="px-5 py-2 text-sm"
             />
           </nav>
         </details>

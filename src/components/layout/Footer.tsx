@@ -3,6 +3,76 @@ import SectionContainer from "@/components/ui/SectionContainer";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 py-12 text-slate-300"><SectionContainer><div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-10 md:flex-row"><div><div className="flex items-center gap-2.5"><span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-sm font-bold text-slate-950">A</span><span className="text-lg font-semibold text-white">accredian.enterprise</span></div><p className="mt-4 max-w-sm text-sm leading-6 text-slate-400">Learning infrastructure for teams with somewhere important to go.</p></div><div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm"><Link href="#platform" className="hover:text-white">Platform</Link><Link href="#outcomes" className="hover:text-white">Outcomes</Link><Link href="#stories" className="hover:text-white">Stories</Link><Link href="#contact" className="hover:text-white">Contact</Link></div></div><div className="pt-7 text-sm text-slate-500">© 2026 Accredian Enterprise. Built for better work.</div></SectionContainer></footer>
+    <footer className="bg-slate-950 text-slate-300">
+      <SectionContainer>
+        <div className="grid gap-12 border-b border-slate-800 py-14 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-white">
+              Accredian
+            </h2>
+
+            <p className="mt-3 max-w-md leading-7 text-slate-400">
+              Empowering organizations with enterprise learning programs that
+              help teams build practical skills and drive business growth.
+            </p>
+          </div>
+
+          <div className="grid gap-10 sm:grid-cols-2">
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">
+                Quick Links
+              </h3>
+
+              <ul className="space-y-3">
+                <li>
+                  <Link href="#home" className="hover:text-white">
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#programs" className="hover:text-white">
+                    Programs
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#features" className="hover:text-white">
+                    Features
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#contact" className="hover:text-white">
+                    Contact
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#faq" className="hover:text-white">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">
+                Contact
+              </h3>
+
+              <ul className="space-y-3">
+                <li>enterprise@accredian.com</li>
+                <li>+91 XXXXX XXXXX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-6 text-center text-sm text-slate-500">
+          © 2026 Accredian Enterprise. All rights reserved.
+        </div>
+      </SectionContainer>
+    </footer>
   );
 }
